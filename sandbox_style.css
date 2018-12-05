@@ -1,0 +1,91 @@
+/* From  General Workspace*/
+    .container {
+    padding: 10pt;
+    }
+    
+    body {
+    background-color: rgba(76, 218, 210, 0.89);
+    }
+    
+    .jumbotron {
+        background-color: white;
+        text-shadow: 2px 2px 5px grey;
+        padding: .5rem;
+    }
+
+    #main-doc { 
+        background: url('Images/copy-circular-dots.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-bottom: 50em;
+        padding-top: 3rem;
+      }
+    
+    .card-title {
+        text-align: center;
+        border: 3pt double rgb(145, 142, 142);
+        margin-bottom: .2rem;
+    }
+    
+    .card {
+        border: 2pt solid rgb(64, 224, 208, 0.5);
+
+    }
+    
+    .card-body {
+        padding: .5rem 1rem 1rem 1rem;
+    }
+    
+    button {
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-transition-duration: 0.3s; 
+    transition-duration: 0.3s;
+    border: 1pt solid  rgb(145, 142, 142);
+    padding: 2pt;
+    margin: 2pt;
+    }
+    
+    button:hover {
+       background-color: #e7e7e7;
+    }
+    
+    .small-type {
+        font-size: 0.75em; 
+    }
+    
+    .row {
+        margin: 10pt 0 10pt 0;
+      }
+    
+    .alignme {
+        padding: 10pt 0 5pt 10pt;
+        text-align: center;
+    }
+    
+    #no-gap {
+        padding: 0;
+    }
+    
+    #no-image {
+        background-image: none;
+    }
+    
+    #spacer {
+        height: 3rem;
+    }
+
+    #triangles {
+        padding: 10pt;
+        margin: 5pt;
+    }
+    
+    #match, #again {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 5pt 0 5pt;
+      }

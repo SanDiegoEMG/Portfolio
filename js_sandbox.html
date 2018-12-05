@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.15/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Popper for JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Averia+Libre|Charmonman|Mogra|Satisfy" rel="stylesheet">
+
+    <title>New Sandbox</title>
+
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="sandbox_style.css">
+    <script type="text/javascript" src="newSandbox.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="no-image" class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="alignme"><strong>Welcome to my Coding Sandbox!</strong></h1>
+            <div class="alignme">
+                <h4>This page grows and changes as I learn</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom">
+        <section class="container-fluid">
+            <a class="navbar-brand" href="index2.html">Em G</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">About Me </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/SanDiegoEMG" target="_blank">GitHub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://linkedin.com/in/em-goss" target="_blank">LinkedIn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="js_sandbox.html">Coding Sandbox</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Portfolio Highlights
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="js_sandbox.html" target="_blank">JS Sandbox</a>
+                            <a class="dropdown-item" href="#">Firebase RPS (soon)</a>
+                            <a class="dropdown-item" href="#">Another Item</a>
+                            <a class="dropdown-item" href="#">Another Item</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- End Nav -->
+
+            <!-- scrolling marquee in navbar ... place above section-->
+            <section id="marquee-container" class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <marquee behavior="scroll" direction="left" class="typeface" scrollamount="8">"The mystics
+                            and
+                            saints
+                            of every tradition come to
+                            the same conclusion that we are, at our core, pure, connected and created from
+                            love. We are bound in mysterious ways with the source of life, by whatever name we give
+                            her."</marquee>
+                    </div>
+                </div>
+            </section>
+            <!-- end scrolling marquee -->
+        </section>
+    </nav>
+
+    <!-- spacer row -->
+    <div id="spacer" class="row"></div>
+
+    <!-- Container ready to go-->
+
+    <section id="main-doc" class="container container-fluid">
+
+        <section id="row1" class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">Simple Timestamp</div>
+                    <div class="card-body text-center">
+                        <p id="timeNow"> </p>
+                        <p id="dayToday"></p>
+                        <button id="theButton" > Click Here</button>
+                        <button id="resetButton">Reset</button>
+                        <hr />
+                        <p class="small-type">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">Random Numbers Facts API </div>
+                    <div class="card-body text-center">
+                    <p id="moreLearning">Show me something interesting!</p>
+                        <button class="small-type" id="mathFun"> Click Here for a Fun Number Fact! </button>
+                        <hr />
+                        <p class="small-type">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">JS basic #2</div>
+                    <div class="card-body text-center">
+                        <p>Wondering if the Window is the doc, the html, or the card?<span></span> </p>
+                        <button id="print">Print Window</button>
+                        <p class="small-type">Answer: simplified container & jumbotron</p>
+                        <hr />
+                        <p class="small-type text-left">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="row2" class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">next</div>
+                    <div class="card-body text-center">
+                        <p><span></span> </p>
+                        <button id="print">blank</button>
+                        <hr />
+                        <p class="small-type align-left">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">next</div>
+                    <div class="card-body text-center">
+                        <p><span></span> </p>
+                        <button id="print">blank</button>
+                        <hr />
+                        <p class="small-type align-left">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">Next</div>
+                    <div class="card-body text-center">
+                        <p><span></span> </p>
+                        <button id="print">blank</button>
+                        <hr />
+                        <p class="small-type align-left">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="row3" class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">next</div>
+                    <div class="card-body text-center">
+                        <p><span></span> </p>
+                        <button id="print">blank</button>
+                        <hr />
+                        <p class="small-type align-left">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">next</div>
+                    <div class="card-body text-center">
+                        <p><span></span> </p>
+                        <button id="print">blank</button>
+                        <hr />
+                        <p class="small-type align-left">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">Next</div>
+                    <div class="card-body text-center">
+                        <p><span></span> </p>
+                        <button id="print">blank</button>
+                        <hr />
+                        <p class="small-type align-left">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">next</div>
+                    <div class="card-body text-center">
+                        <p><span></span> </p>
+                        <button id="print">blank</button>
+                        <hr />
+                        <p class="small-type align-left">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">next</div>
+                    <div class="card-body text-center">
+                        <p><span></span> </p>
+                        <button id="print">blank</button>
+                        <hr />
+                        <p class="small-type align-left">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-title">Next</div>
+                    <div class="card-body text-center">
+                        <p><span></span> </p>
+                        <button id="print">blank</button>
+                        <hr />
+                        <p class="small-type align-left">Featured Technologies & Techniques</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- End Container-fluid -->
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small bg-custom pt-4 ">
+        <!-- <div class="container-fluid text-center text-md-left text">
+            <div class="row">       
+            </div>
+        </div> -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="index2.html"> Em G</a>
+        </div>
+    </footer>
+    <!-- End Footer -->
+</body>
+
+</html>

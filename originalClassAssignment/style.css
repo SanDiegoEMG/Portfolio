@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: lightgray;
+}
+
+.navbar {
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.navform {
+    border-bottom: 3px solid rgb(178, 211, 211);
+}
+
+/* the solid box on navbar ...doesn't adjust size when window is changed*/
+.namebox {
+    background: rgb(178, 211, 211);
+    height: 100%;
+    /*
+    padding: 30px 15px;
+    margin: 0 20px;
+    */
+    font-weight: bold;
+    -webkit-text-fill-color: whitesmoke;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: darkgrey;
+    font-size: 200%;
+}
+
+/* main container with image and text shared across all pages*/
+.mainelement {
+   width: 80%;
+   max-width: 980px;
+   padding: 20pt 20pt;
+   border: 3pt solid grey;
+   margin: 5% 2%;
+   background-color: #f8f9fa;
+}
+
+/* details for the About Me header */
+.colorful {
+    color:rgb(130, 165, 165);
+    padding: 10px 0 0 0;
+    /* had to nudge the word to the right */
+    margin: 0 0 15pt 5pt;
+    border-bottom: 1pt solid lightgray;
+}
+
+.headshot {
+    border: 1pt solid rgb(41, 70, 41);
+    border-radius: 5pt;
+    float: left;
+    margin: 5pt 10pt 5pt 5pt;
+}
+
+/* styling for portfolio tiles */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.overlaybanner {
+    background-color: rgb(130, 165, 165);
+    color: white;
+    font-weight: bold;
+    float: bottom;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10pt 10pt;
+    width: 70%;
+}
+.boundaries {
+    padding: 10pt 0 10pt 0;
+}
+
+.specs {
+    border-top: 6pt solid grey;
+    background-color: rgb(130, 165, 165);
+    width: 100%;
+    text-align: center;
+    padding: 10pt 0;
+}
+
+/* for playing files!*/
+.outline {
+    border: 3pt solid black;
+    margin: 10pt;
+}
