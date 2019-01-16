@@ -23,7 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Averia+Libre|Charmonman|Mogra|Satisfy" rel="stylesheet">
-    <title>Em Portfolio</title>
+    <title>Em G: Web Developer</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="script.js"></script>
@@ -31,17 +31,10 @@
 
 <body>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4"></h1>
-            <p class="lead"></p>
-        </div>
-    </div>
-
     <!-- Start Nav -->
     <nav class="navbar navbar-expand-lg navbar-light bg-custom">
         <section class="container-fluid">
-            <a class="navbar-brand" href="index2.html">Em G</a>
+            <a class="navbar-brand" href="index.html">Em G</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,27 +42,46 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="aboutme.html">About Me </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/SanDiegoEMG" target="_blank">GitHub</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://linkedin.com/in/em-goss" target="_blank">LinkedIn</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="js_sandbox.html">Coding Sandbox</a>
+                        <a class="nav-link" href="aboutme.html">About Me &nbsp; </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
-                            Portfolio Highlights
+                            Profiles
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="https://linkedin.com/in/em-goss" target="_blank"><img src="./images/LinkedIn_logo.png"
+                                    class="skill-logo"> &nbsp; LinkedIn</a>
+                            <a class="dropdown-item" href="https://github.com/SanDiegoEMG" target="_blank"><img src="./images/github_logo.png"
+                                    class="skill-logo"> &nbsp; GitHub</a>
+                            <a class="dropdown-item" href="#">Another Item</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Personal Projects
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="js_sandbox.html" target="_blank">JS Sandbox</a>
-                            <a class="dropdown-item" href="#">Firebase RPS (soon)</a>
-                            <a class="dropdown-item" href="#">Another Item</a>
-                            <a class="dropdown-item" href="#">Another Item</a>
+                            <a class="dropdown-item" target="_blank" href="https://github.com/SanDiegoEMG/firstfullstack">First
+                                Full Stack Web App (repo)</a>
+                            <!-- <a class="dropdown-item" href="#">Another Item</a> -->
+                            <!-- <a class="dropdown-item" href="#">Another Item</a> -->
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Collaborations
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="https://coding-with-friends.herokuapp.com/" target="_blank">Coding
+                                with Friends</a>
+                            <a class="dropdown-item" href="https://github.com/heldercalado/class-project-1" target="_blank">Action
+                                Adventures (repo)</a>
+                            <!-- <a class="dropdown-item" href="#">Another Item</a> -->
+                            <!-- <a class="dropdown-item" href="#">Another Item</a> -->
                         </div>
                     </li>
                 </ul>
@@ -79,38 +91,9 @@
     <!-- End Nav -->
 
 
-    <!-- Container ready to go-->
-    <div class="col-md-1"></div>
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <img class="card-img-top" src="./Images/flowers_sunset.jpg" alt="Card image cap">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-1"></div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <img class="card-img-top" src="./Images/mona_lisa.jpeg" alt="Card image cap">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-1"></div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body">
-                        <img class="card-img-top" src="./Images/waves_surfing.jpg" alt="Card image cap">
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Container holding main image -->
+    <section class="container-fluid  main-section" id="main-background-image">
+        <img src="./Images/flowers_sunset.jpg" alt="cherry blossom tree" style="width:100%">
     </section>
     <!-- End Container-fluid -->
 

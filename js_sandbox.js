@@ -67,7 +67,7 @@
   console.log(mthName);
 
   $("#dateButton").on("click", function () {
-      var compDate = $("#showdatehere").text(mthName + " " + date + ", " + yr);
+      var compDate = $("#date").text(mthName + " " + date + ", " + yr);
   });
   // End exercise #3
 
