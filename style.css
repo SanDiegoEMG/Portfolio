@@ -4,10 +4,16 @@
 }
 
 .bg-custom {
-  /* background-color: rgba(168, 250, 250, 0.637); */
-  /* background-color: #BFF9F5; */
+
   background-color: #9AC6C5;
   border-bottom: 1pt solid darkgray;
+}
+.pull-in{
+  padding: 0 30pt 0 30pt;
+}
+
+ul {
+  list-style: none;
 }
 
 .main-section {
@@ -36,7 +42,7 @@
 .typeface {
   font-family: "Averia Libre", cursive;
   font-size: 1.5em;
-  line-height: 1.5em;
+  line-height: 1.75em;
 }
 
 .thick-stroke {
@@ -103,7 +109,7 @@ body {
 }
 
 .carousel-item {
-  height: 70px;
+  height: 90px;
   text-align: center;
   padding: 10px;
   margin: 10px;
