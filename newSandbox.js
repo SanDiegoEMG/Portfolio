@@ -1,24 +1,7 @@
 $(document).ready(function() {
   var newP = $("<p></p>");
 
-  //  Exercise #1  W3 js basics
-  // buttons= resetButton / theButton
-  // #dayToday = place to show
-
-  var months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ];
+  //  Row 1-1
   var daysOfWeek = [
     "Sunday",
     "Monday",
@@ -29,64 +12,37 @@ $(document).ready(function() {
     "Saturday"
   ];
 
-  var d = new Date();
-  console.log("d = " + d);
-
-  var yr = d.getFullYear();
-  console.log(yr);
-
-  var mth = d.getMonth();
-  console.log(mth);
-
-  var date = d.getDate();
-  console.log(date);
-
-  var mthName = months[mth];
-  console.log(mthName);
-
-  function formatAMPM(date) {
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
+  function dayTime() {
+    var d = new Date();
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    var seconds = d.getSeconds();
     var ampm = hours >= 12 ? "pm" : "am";
     hours = hours % 12;
     hours = hours ? hours : 12; // the hour '0' should be '12'
     minutes = minutes < 10 ? "0" + minutes : minutes;
     var strTime = hours + ":" + minutes + ":" + seconds + " " + ampm;
-    $("#timeNow").text(strTime);
-  };
-
-  function getDate() {
-    // var compDate = $("#date").text(mthName + " " + date + ", " + yr);
-    // document.getElementById("date").innerHTML = compDate; 
-    $('#date').html( months[d.getMonth()] + " " + d.getDate() + ', ' + d.getFullYear());
-  };
-
-  
-  function dayStamp() {
     var n = d.getDay();
+    // var y = d.getHours() + " : " + d.getMinutes() + " : " + d.getSeconds();
     document.getElementById("dayToday").innerHTML = daysOfWeek[n];
-
-  };
-
-  $("#theButton").on("click", function() {
-    formatAMPM(d);
-    dayStamp();
-    getDate();
-  });
+    document.getElementById("timeNow").innerHTML = strTime;
+  }
 
   function reset() {
     $("#dayToday").empty();
     $("#timeNow").empty();
-    $("#date").empty();
   }
+
+  $("#theButton").on("click", function() {
+    dayTime();
+  });
 
   $("#resetButton").on("click", function() {
     reset();
   });
-
   // End row1-1
 
+  // Row 1-2
   // simple api call to return random factoid
   var mathQueryURL = "http://numbersapi.com/random/trivia";
 
@@ -100,7 +56,7 @@ $(document).ready(function() {
   });
   // End row1-2
 
-  //  Exercise #2 W3 js basics
+  //  Row 1-3
   $("#print").on("click", function() {
     printThis();
   });
@@ -109,4 +65,104 @@ $(document).ready(function() {
     window.print();
   }
   // End row1-3
+
+  // Row2-1
+  //  Begin API RESTful countries exploration
+  var queryURL = "https://restcountries.eu/rest/v2/name/";
+
+  $("#country-api-button").on("click", function(event) {
+    event.preventDefault();
+    var ctryName = $("#country-name")
+      .val()
+      .trim();
+    $.ajax({
+      url: queryURL + ctryName,
+      Method: "GET"
+    }).then(function(response) {
+      console.log(response);
+      $("#country-facts").empty();
+      var ctryCapital = response[0].capital;
+      var displayDiv = $("<div class='country-info'></div>");
+      var pOne = $("<p>").text("Capital City: " + ctryCapital);
+      var ctryPop = response[0].population;
+      var commas = ctryPop.toLocaleString();
+      var pTwo = $("<p>.").text("Population: " + commas);
+      var region = response[0].subregion;
+      var pThree = $("<p>").text("World region: " + region);
+      var flagURL = response[0].flag;
+      var flag = $("<img height='95px' width='141px'>")
+        .attr("src", flagURL)
+        .attr("id", "border-box");
+      $("#country-facts").append(displayDiv, pOne, pTwo, pThree, flag);
+    });
+  });
+  //End row2-1
+
+  // Row2-2
+  function compNumGenerate() {
+    return Math.floor(Math.random() * 9) + 1; // min and max included
+  }
+
+  $("#match").on("click", function(event) {
+    event.preventDefault();
+    $("#comp-num").text("?");
+    $("#person-num").text("?");
+    $("#show-result")
+      .empty()
+      .append("Click button and then type a number between 1-9");
+    var compNum = compNumGenerate();
+    console.log(compNum);
+
+    var didTheUserTry = false;
+
+    document.onkeyup = function(event) {
+      var userGuess = event.key;
+      $("#match").text("Play Again");
+      if (userGuess >= 1 && userGuess <= 9 && !didTheUserTry) {
+        $("#person-num").text(userGuess);
+        $("#comp-num").text(compNum);
+        if (userGuess == compNum) {
+          $("#show-result").prepend(
+            "<p><strong> 'WooHoo! You guessed correctly! Maybe play the lottery...'</strong></p>"
+          );
+          didTheUserTry = true;
+        } else {
+          $("#show-result").prepend(
+            "<p><strong>'Not your lucky day.'</strong></p>"
+          );
+          didTheUserTry = true;
+        }
+      } else if (!didTheUserTry) {
+        $("#person-num").text("Not a valid choice. Choose a number 1-9.");
+      }
+    };
+  });
+  // End row2-2
+
+  //Start Row2-3
+  var letterArr = [];
+  $("#get-letters").on("click", function(event) {
+    event.preventDefault();
+    var word = $("#word")
+      .val()
+      .trim();
+    console.log(word);
+    document.getElementById("word-here").innerHTML = word;
+    letterArr = [];
+
+    for (var i = 0; i < word.length; i++) {
+      letterArr.push(word.charAt(i));
+      console.log(letterArr);
+    }
+  });
+
+  $("#rearrange").on("click", function(event) {
+    event.preventDefault();
+    console.log("clicked!");
+    var letter = letterArr.shift();
+    letterArr.push(letter);
+    console.log(letterArr);
+    document.getElementById("word-here").innerHTML = letterArr.join("");
+  });
+  //  End row2-3
 });
